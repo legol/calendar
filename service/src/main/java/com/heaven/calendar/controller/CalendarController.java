@@ -16,9 +16,14 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class CalendarController {
     @RequestMapping("/test")
-    //@ResponseBody
+    @ResponseBody
     public Object test(HttpServletRequest request, HttpServletResponse response) {
-        return new ModelAndView("index.jsp");
-        //return "hello calendar & spring mvc!";
+        return "hello calendar & spring mvc!";
     }
+
+    @RequestMapping("/test_page")
+    public Object test_page(HttpServletRequest request, HttpServletResponse response) {
+        return new ModelAndView("test_page");
+    }
+
 }
