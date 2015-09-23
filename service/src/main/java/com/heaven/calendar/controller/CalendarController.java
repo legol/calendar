@@ -26,4 +26,8 @@ public class CalendarController {
         return new ModelAndView("test_page");
     }
 
+    @RequestMapping("/main_page")
+    public Object main_page(HttpServletRequest request, HttpServletResponse response) {
+        return new ModelAndView("main");
+    }
 }
